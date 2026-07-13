@@ -2,6 +2,7 @@
 package analyze
 
 import (
+	"encoding/json"
 	"fmt"
 	"math"
 	"sort"
@@ -306,4 +307,13 @@ func FormatStats(stats *Stats) string {
 	}
 
 	return result
+}
+
+// FormatStatsJSON formats statistics as a JSON string.
+func FormatStatsJSON(stats *Stats) string {
+	data, err := json.MarshalIndent(stats, "", "  ")
+	if err != nil {
+		return fmt.Sprintf(`{"error": "%s"}`, err.Error())
+	}
+	return string(data)
 }

@@ -26,6 +26,7 @@ graph algorithms, statistics, and visualization.`,
 
 	// Stats command
 	var statsDirected bool
+	var statsJSON bool
 	statsCmd := &cobra.Command{
 		Use:   "stats [file]",
 		Short: "Compute graph statistics",
@@ -38,11 +39,16 @@ graph algorithms, statistics, and visualization.`,
 			}
 
 			stats := analyze.ComputeStats(g)
-			fmt.Print(analyze.FormatStats(stats))
+			if statsJSON {
+				fmt.Println(analyze.FormatStatsJSON(stats))
+			} else {
+				fmt.Print(analyze.FormatStats(stats))
+			}
 			return nil
 		},
 	}
 	statsCmd.Flags().BoolVar(&statsDirected, "directed", false, "Treat graph as directed")
+	statsCmd.Flags().BoolVar(&statsJSON, "json", false, "Output statistics as JSON")
 	rootCmd.AddCommand(statsCmd)
 
 	// BFS command
