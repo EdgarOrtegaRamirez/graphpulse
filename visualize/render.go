@@ -11,18 +11,18 @@ import (
 
 // ASCIIConfig holds configuration for ASCII visualization.
 type ASCIIConfig struct {
-	Width    int  // Terminal width
-	Height   int  // Terminal height
-	Compact  bool // Use compact layout
+	Width       int  // Terminal width
+	Height      int  // Terminal height
+	Compact     bool // Use compact layout
 	ShowWeights bool // Show edge weights
 }
 
 // DefaultASCIIConfig returns default ASCII config.
 func DefaultASCIIConfig() *ASCIIConfig {
 	return &ASCIIConfig{
-		Width:    80,
-		Height:   24,
-		Compact:  false,
+		Width:       80,
+		Height:      24,
+		Compact:     false,
 		ShowWeights: true,
 	}
 }

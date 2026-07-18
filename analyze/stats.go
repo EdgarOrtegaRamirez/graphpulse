@@ -12,23 +12,23 @@ import (
 
 // Stats holds graph statistics.
 type Stats struct {
-	NodeCount         int                `json:"node_count"`
-	EdgeCount         int                `json:"edge_count"`
-	Density           float64            `json:"density"`
-	AvgDegree         float64            `json:"avg_degree"`
-	MaxDegree         int                `json:"max_degree"`
-	MinDegree         int                `json:"min_degree"`
-	IsConnected       bool               `json:"is_connected"`
-	NumComponents     int                `json:"num_components"`
-	HasCycles         bool               `json:"has_cycles"`
-	IsDAG             bool               `json:"is_dag"`
-	Components        [][]string         `json:"components"`
-	DegreeDistribution map[string]int    `json:"degree_distribution"`
-	DegreeHistogram   []DegreeBucket     `json:"degree_histogram"`
-	DiameterEstimate  int                `json:"diameter_estimate"`
-	RadiusEstimate    int                `json:"radius_estimate"`
-	ClusteringCoeff   float64            `json:"clustering_coefficient"`
-	PageRankTop10     []PageRankEntry    `json:"pagerank_top10"`
+	NodeCount          int             `json:"node_count"`
+	EdgeCount          int             `json:"edge_count"`
+	Density            float64         `json:"density"`
+	AvgDegree          float64         `json:"avg_degree"`
+	MaxDegree          int             `json:"max_degree"`
+	MinDegree          int             `json:"min_degree"`
+	IsConnected        bool            `json:"is_connected"`
+	NumComponents      int             `json:"num_components"`
+	HasCycles          bool            `json:"has_cycles"`
+	IsDAG              bool            `json:"is_dag"`
+	Components         [][]string      `json:"components"`
+	DegreeDistribution map[string]int  `json:"degree_distribution"`
+	DegreeHistogram    []DegreeBucket  `json:"degree_histogram"`
+	DiameterEstimate   int             `json:"diameter_estimate"`
+	RadiusEstimate     int             `json:"radius_estimate"`
+	ClusteringCoeff    float64         `json:"clustering_coefficient"`
+	PageRankTop10      []PageRankEntry `json:"pagerank_top10"`
 }
 
 // DegreeBucket is a bucket in the degree histogram.

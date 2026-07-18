@@ -162,9 +162,9 @@ func (g *Graph) DFSAll() *DFSResult {
 
 // DijkstraResult contains the result of Dijkstra's algorithm.
 type DijkstraResult struct {
-	Dist map[string]float64   // Shortest distance from source
-	Prev map[string]string    // Previous node in shortest path
-	Path map[string][]string  // Full path from source to each node
+	Dist map[string]float64  // Shortest distance from source
+	Prev map[string]string   // Previous node in shortest path
+	Path map[string][]string // Full path from source to each node
 }
 
 // Dijkstra implements Dijkstra's shortest path algorithm.

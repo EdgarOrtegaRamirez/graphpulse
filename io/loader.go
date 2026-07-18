@@ -120,9 +120,9 @@ func LoadCSV(filename string, directed bool) (*graph.Graph, error) {
 
 // GraphJSON is the JSON representation of a graph.
 type GraphJSON struct {
-	Nodes     []NodeJSON     `json:"nodes"`
-	Edges     []EdgeJSON     `json:"edges"`
-	Directed  bool           `json:"directed"`
+	Nodes    []NodeJSON `json:"nodes"`
+	Edges    []EdgeJSON `json:"edges"`
+	Directed bool       `json:"directed"`
 }
 
 // NodeJSON is the JSON representation of a node.
